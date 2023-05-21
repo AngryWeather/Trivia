@@ -10,12 +10,12 @@ header {
 h1 {
   margin: 0;
   color: white;
-  padding: 1rem;
+  padding: $header-padding;
   display: inline-block;
 }
 
 .menu {
   height: 50%;
   margin-left: auto;
-  padding: 1rem;
+  padding: $header-padding;
 }
