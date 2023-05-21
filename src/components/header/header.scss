@@ -1,3 +1,6 @@
+@import "../../variables.scss";
+
 header {
-    height: 4rem;
+  height: 4rem;
+  background-color: $primary-color;
 }
