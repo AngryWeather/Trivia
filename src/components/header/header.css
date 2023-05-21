@@ -1,4 +1,10 @@
 header {
   height: 4rem;
   background-color: rgb(18, 94, 138);
+}
+
+h1 {
+  margin: 0;
+  color: white;
+  padding: 1rem;
 }/*# sourceMappingURL=header.css.map */
