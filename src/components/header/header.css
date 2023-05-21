@@ -1,6 +1,8 @@
 header {
   height: 4rem;
   background-color: rgb(18, 94, 138);
+  display: flex;
+  align-items: center;
 }
 
 h1 {
@@ -12,4 +14,6 @@ h1 {
 
 .menu {
   height: 50%;
+  margin-left: auto;
+  padding: 1rem;
 }/*# sourceMappingURL=header.css.map */
