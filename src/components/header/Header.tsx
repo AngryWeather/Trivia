@@ -8,9 +8,9 @@ export const Header: FC = () => {
 
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
-  }, []);
+  }, [width]);
 
-  if (width < 800) {
+  if (width < 1000) {
     return (
       <header>
         <h1>Trivia</h1>
