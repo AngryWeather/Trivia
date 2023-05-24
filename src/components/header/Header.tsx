@@ -14,7 +14,8 @@ export const Header: FC = () => {
     return (
       <header>
         <h1>Trivia</h1>
-        <img src={menu} alt="hamburger menu" className="menu" />
+        <img onClick={() => setMobileNavVisible(true ? false : true)}
+          src={menu} alt="hamburger menu" className="menu" />
       </header>
     );
   } else {
