@@ -9,9 +9,9 @@ export const Register: FC = () => {
         <label htmlFor="username">Username</label>
         <input type="text"></input>
         <label htmlFor="email">email</label>
-        <input type="text"></input>
+        <input type="email"></input>
         <label htmlFor="password">password</label>
-        <input type="text"></input>
+        <input type="password"></input>
         <button type="submit">Submit</button>
       </form>
     </section>
