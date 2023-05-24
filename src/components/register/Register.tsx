@@ -6,13 +6,9 @@ export const Register: FC = () => {
   return (
     <section id="register">
       <form>
-        <article>
-          <label htmlFor="username">
-            Username
-          </label>
-          <input type="text"></input>
-        </article>
+        <label htmlFor="username">Username</label>
+        <input type="text"></input>
       </form>
     </section>
   );
-}
+};
