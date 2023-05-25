@@ -8,7 +8,12 @@ export const Register: FC = () => {
       <form>
         <label htmlFor="username">Username</label>
         <input type="text"></input>
-        <label htmlFor="email">email</label>
+        <label
+          onChange={(e) => setEmail((e.target as HTMLInputElement).value)}
+          htmlFor="email"
+        >
+          email
+        </label>
         <input type="email"></input>
         <label htmlFor="password">password</label>
         <input type="password"></input>
