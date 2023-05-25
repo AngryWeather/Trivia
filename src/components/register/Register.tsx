@@ -7,14 +7,15 @@ export const Register: FC = () => {
     <section id="register">
       <form>
         <label htmlFor="username">Username</label>
-        <input type="text"></input>
+        <input id="username" type="text"></input>
         <label htmlFor="email">email</label>
         <input
           onChange={(e) => setEmail((e.target as HTMLInputElement).value)}
           type="email"
+          id="email"
         ></input>
         <label htmlFor="password">password</label>
-        <input type="password"></input>
+        <input type="password" id="password"></input>
         <button type="submit">Submit</button>
       </form>
     </section>
