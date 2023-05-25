@@ -1,13 +1,34 @@
-import { FC, useState } from "react";
+import { FC, SyntheticEvent, useState } from "react";
 
 export const Register: FC = () => {
   const [username, setUsername] = useState<string>();
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
 
+  async function handleSubmit(e: SyntheticEvent): Promise<void> {
+    e.preventDefault();
+    console.log(e);
+    console.log("HERE");
+    console.log(username);
+    const request = await fetch("http://localhost:8080/user/register", {
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        username,
+        email,
+        password,
+      }),
+    });
+    const response = await request.json();
+    console.log(response);
+  }
+
   return (
     <section id="register">
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username</label>
         <input
           onChange={(e) => setUsername((e.target as HTMLInputElement).value)}
