@@ -10,7 +10,7 @@ export const Register: FC = () => {
       <form>
         <label htmlFor="username">Username</label>
         <input
-          onChange={(e) => (e.target as HTMLInputElement).value}
+          onChange={(e) => setUsername((e.target as HTMLInputElement).value)}
           id="username"
           type="text"
         ></input>
@@ -22,7 +22,7 @@ export const Register: FC = () => {
         ></input>
         <label htmlFor="password">password</label>
         <input
-          onChange={(e) => (e.target as HTMLInputElement).value}
+          onChange={(e) => setPassword((e.target as HTMLInputElement).value)}
           type="password"
           id="password"
         ></input>
