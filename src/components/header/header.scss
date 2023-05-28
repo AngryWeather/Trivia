@@ -1,7 +1,7 @@
 @import "../../variables.scss";
 
 header {
-  height: 4rem;
+  height: $header-height;
   background-color: $primary-color;
   display: flex;
   align-items: center;
