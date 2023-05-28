@@ -7,9 +7,6 @@ export const Register: FC = () => {
 
   async function handleSubmit(e: SyntheticEvent): Promise<void> {
     e.preventDefault();
-    console.log(e);
-    console.log("HERE");
-    console.log(username);
     const request = await fetch("http://localhost:8080/user/register", {
       method: "POST",
       mode: "cors",
