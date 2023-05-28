@@ -16,7 +16,7 @@ export const Header: FC = () => {
       <header>
         <h1>Trivia</h1>
         <img
-          onClick={() => setMobileNavVisible(true ? false : false)}
+          onClick={() => setMobileNavVisible(mobileNavVisible ? false : true)}
           src={menu}
           alt="hamburger menu"
           className="menu"
