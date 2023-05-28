@@ -15,15 +15,18 @@ export const Header: FC = () => {
     return (
       <header>
         <h1>Trivia</h1>
-        <img onClick={() => setMobileNavVisible(true ? false : false)}
-          src={menu} alt="hamburger menu" className="menu" />
+        <img
+          onClick={() => setMobileNavVisible(true ? false : false)}
+          src={menu}
+          alt="hamburger menu"
+          className="menu"
+        />
       </header>
     );
   } else {
     return (
       <header>
         <h1>Trivia</h1>
-        <Register></Register>
       </header>
     );
   }
