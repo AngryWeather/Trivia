@@ -58,7 +58,7 @@ button {
 @media (min-width: 1000px) {
   .form {
     width: 30%;
-    border: 1px solid $primary-color;
+    box-shadow: 3px 3px 8px $primary-color;
     margin-top: 1rem;
     border-radius: $border-radius;
   }
