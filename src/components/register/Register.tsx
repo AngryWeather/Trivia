@@ -24,7 +24,7 @@ export const Register: FC = () => {
   }
 
   return (
-    <section id="register">
+    <div id="register">
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username</label>
         <input
@@ -50,6 +50,6 @@ export const Register: FC = () => {
         ></input>
         <button type="submit">Submit</button>
       </form>
-    </section>
+    </div>
   );
 };
