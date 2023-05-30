@@ -31,18 +31,21 @@ export const Register: FC = () => {
           onChange={(e) => setUsername((e.target as HTMLInputElement).value)}
           id="username"
           type="text"
+          required
         ></input>
         <label htmlFor="email">email</label>
         <input
           onChange={(e) => setEmail((e.target as HTMLInputElement).value)}
           type="email"
           id="email"
+          required
         ></input>
         <label htmlFor="password">password</label>
         <input
           onChange={(e) => setPassword((e.target as HTMLInputElement).value)}
           type="password"
           id="password"
+          required
         ></input>
         <button type="submit">Submit</button>
       </form>
