@@ -4,10 +4,20 @@
   margin: 0 auto;
 }
 
+body {
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(18, 94, 138, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
 form {
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  background-color: white;
 }
 
 label {
@@ -51,11 +61,12 @@ button {
 
 @media (min-width: 800px) {
   .form {
-    width: 80%;
+    width: 50%;
+    margin-top: 1rem;
   }
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1270px) {
   .form {
     width: 30%;
     box-shadow: 3px 3px 8px $primary-color;
