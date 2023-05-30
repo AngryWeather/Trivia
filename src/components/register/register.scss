@@ -27,6 +27,7 @@ input {
   font-family: "Courier New", Courier, monospace;
   border: 1px solid $primary-color;
   color: black;
+  border-radius: 0.5rem;
 
   &:focus {
     outline: 2px outset $primary-color;
