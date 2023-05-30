@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+
+.form {
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+label {
+  font-family: "Courier New", Courier, monospace;
+  color: $primary-color;
+}
+
+.line {
+  height: 1.5px;
+  background-color: $primary-color;
+  margin-bottom: 1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid $primary-color;
+
+  &:focus {
+    outline: 2px outset $primary-color;
+  }
+}

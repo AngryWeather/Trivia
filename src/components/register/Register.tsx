@@ -1,4 +1,5 @@
 import { FC, SyntheticEvent, useState } from "react";
+import "./register.css";
 
 export const Register: FC = () => {
   const [username, setUsername] = useState<string>();
@@ -24,9 +25,10 @@ export const Register: FC = () => {
   }
 
   return (
-    <div id="register">
+    <div className="form" id="register">
       <form onSubmit={handleSubmit}>
         <label htmlFor="username">Username</label>
+        <div className="line"></div>
         <input
           onChange={(e) => setUsername((e.target as HTMLInputElement).value)}
           id="username"
@@ -34,6 +36,7 @@ export const Register: FC = () => {
           required
         ></input>
         <label htmlFor="email">Email</label>
+        <div className="line"></div>
         <input
           onChange={(e) => setEmail((e.target as HTMLInputElement).value)}
           type="email"
@@ -41,6 +44,7 @@ export const Register: FC = () => {
           required
         ></input>
         <label htmlFor="password">Password</label>
+        <div className="line"></div>
         <input
           onChange={(e) => setPassword((e.target as HTMLInputElement).value)}
           type="password"
