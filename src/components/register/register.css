@@ -46,4 +46,18 @@ button {
   color: white;
   border: 5px solid rgb(18, 94, 138);
   border-radius: 0.5rem;
+}
+
+@media (min-width: 800px) {
+  .form {
+    width: 80%;
+  }
+}
+@media (min-width: 1000px) {
+  .form {
+    width: 50%;
+    border: 1px solid rgb(18, 94, 138);
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+  }
 }/*# sourceMappingURL=register.css.map */

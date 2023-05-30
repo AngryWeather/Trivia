@@ -48,3 +48,18 @@ button {
   border: 5px solid $primary-color;
   border-radius: $border-radius;
 }
+
+@media (min-width: 800px) {
+  .form {
+    width: 80%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .form {
+    width: 50%;
+    border: 1px solid $primary-color;
+    margin-top: 1rem;
+    border-radius: $border-radius;
+  }
+}
