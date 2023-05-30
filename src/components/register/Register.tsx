@@ -45,6 +45,7 @@ export const Register: FC = () => {
           onChange={(e) => setPassword((e.target as HTMLInputElement).value)}
           type="password"
           id="password"
+          minLength={6}
           required
         ></input>
         <button type="submit">Submit</button>
