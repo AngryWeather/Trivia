@@ -26,8 +26,24 @@ input {
   padding: 0.3rem;
   font-family: "Courier New", Courier, monospace;
   border: 1px solid $primary-color;
+  color: black;
 
   &:focus {
     outline: 2px outset $primary-color;
   }
+
+  &::selection {
+    background-color: lightblue;
+  }
+}
+
+button {
+  width: 40%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  font-family: "Courier New", Courier, monospace;
+  background-color: $primary-color;
+  color: white;
+  border: 5px solid $primary-color;
+  border-radius: 0.5rem;
 }

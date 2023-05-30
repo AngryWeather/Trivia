@@ -24,7 +24,25 @@ input {
   padding: 0.3rem;
   font-family: "Courier New", Courier, monospace;
   border: 1px solid rgb(18, 94, 138);
+  color: black;
 }
 input:focus {
   outline: 2px outset rgb(18, 94, 138);
+}
+input::-moz-selection {
+  background-color: lightblue;
+}
+input::selection {
+  background-color: lightblue;
+}
+
+button {
+  width: 40%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(18, 94, 138);
+  color: white;
+  border: 5px solid rgb(18, 94, 138);
+  border-radius: 0.5rem;
 }/*# sourceMappingURL=register.css.map */
