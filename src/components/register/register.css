@@ -3,7 +3,7 @@
 }
 
 body {
-  background: radial-gradient(circle, rgb(2, 0, 36) 0%, rgb(18, 94, 138) 35%, rgb(0, 212, 255) 100%);
+  background: repeating-radial-gradient(ellipse, rgb(2, 0, 36) 0%, rgb(18, 94, 138) 35%, rgb(0, 212, 255) 100%);
 }
 
 form {
@@ -67,9 +67,5 @@ button {
     margin-top: 4rem;
     height: 50vh;
     background-color: white;
-  }
-  body {
-    background: radial-gradient(circle, rgb(2, 0, 36) 0%, rgb(18, 94, 138) 35%, rgb(0, 212, 255) 100%);
-    background-attachment: fixed;
   }
 }/*# sourceMappingURL=register.css.map */
