@@ -36,12 +36,8 @@ input {
   padding: 0.4rem;
   font-family: $primary-font;
   border: 1px solid $primary-color;
-  color: black;
   border-radius: $border-radius;
-
-  &:focus {
-    outline: 2px outset $primary-color;
-  }
+  color: rgba(2, 0, 36, 1);
 
   &::selection {
     background-color: lightblue;

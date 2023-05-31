@@ -29,11 +29,8 @@ input {
   padding: 0.4rem;
   font-family: "Courier New", Courier, monospace;
   border: 1px solid rgb(18, 94, 138);
-  color: black;
   border-radius: 0.5rem;
-}
-input:focus {
-  outline: 2px outset rgb(18, 94, 138);
+  color: rgb(2, 0, 36);
 }
 input::-moz-selection {
   background-color: lightblue;
