@@ -6,7 +6,7 @@
 
 body {
   background: repeating-radial-gradient(
-    ellipse,
+    ellipse at center,
     rgba(2, 0, 36, 1) 0%,
     rgba(18, 94, 138, 1) 35%,
     rgba(0, 212, 255, 1) 100%
@@ -63,6 +63,9 @@ button {
   .form {
     width: 50%;
     margin-top: 4rem;
+  }
+  form {
+    background-color: white;
   }
 }
 
