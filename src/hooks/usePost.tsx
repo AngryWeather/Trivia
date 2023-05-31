@@ -1,4 +1,4 @@
-import { SyntheticEvent, useRef } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
 
 type Data = {
   username: string | undefined;
@@ -7,11 +7,19 @@ type Data = {
 };
 
 export const usePost = ({ username, email, password }: Data) => {
-  const response = useRef<number>();
+  const [responseStatus, setResponseStatus] = useState<number>();
+  const [responseBody, setResponseBody] = useState<any>();
+
+  // useEffect(() => {
+  //    setResponseStatus(responseStatus);
+  //    if (responseStatus !== 200) {
+
+  //    }
+  // }, [responseStatus, responseBody])
 
   async function handleSubmit(e: SyntheticEvent): Promise<void> {
     e.preventDefault();
-    const request = await fetch("http://localhost:8080/user/register", {
+    const response = await fetch("http://localhost:8080/user/register", {
       method: "POST",
       mode: "cors",
       headers: {
@@ -23,7 +31,12 @@ export const usePost = ({ username, email, password }: Data) => {
         password,
       }),
     });
-    response.current = await request.status;
+    setResponseStatus(response.status);
+    try {
+      setResponseBody(await response.json());
+    } catch (error) {
+      console.error(error);
+    }
   }
-  return { handleSubmit, response };
+  return { handleSubmit, responseStatus, responseBody };
 };

@@ -1,12 +1,39 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import "./register.css";
 import { usePost } from "../../hooks/usePost";
+import { useNavigate } from "react-router-dom";
 
 export const Register: FC = () => {
   const [username, setUsername] = useState<string>();
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
-  const { handleSubmit, response } = usePost({ username, email, password });
+  const [userExists, setUserExists] = useState<string>();
+  const [emailExists, setEmailExists] = useState<string>();
+  const { handleSubmit, responseStatus, responseBody } = usePost({
+    username,
+    email,
+    password,
+  });
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (responseBody !== undefined) {
+      if (
+        responseStatus === 400 &&
+        responseBody.error === "user already exists"
+      ) {
+        setUserExists("user already exists");
+      } else if (
+        responseStatus === 400 &&
+        responseBody.error === "user with this email already exists"
+      ) {
+        setEmailExists("user with this email already exists");
+      }
+    }
+    if (responseStatus === 200) {
+      navigate("/");
+    }
+  }, [responseStatus, responseBody, navigate]);
 
   return (
     <div className="form" id="register">
@@ -24,6 +51,7 @@ export const Register: FC = () => {
           type="text"
           required
         ></input>
+        {userExists && <p>{userExists}</p>}
         <label htmlFor="email">
           Email<span className="required">*</span>
         </label>
@@ -34,6 +62,7 @@ export const Register: FC = () => {
           id="email"
           required
         ></input>
+        {emailExists && <p>{emailExists}</p>}
         <label htmlFor="password">
           Password<span className="required">*</span>
         </label>
