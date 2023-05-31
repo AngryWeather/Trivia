@@ -24,7 +24,9 @@ export const Register: FC = () => {
           type="text"
           required
         ></input>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">
+          Email<span className="required">*</span>
+        </label>
         <div className="line"></div>
         <input
           onChange={(e) => setEmail((e.target as HTMLInputElement).value)}
@@ -32,7 +34,9 @@ export const Register: FC = () => {
           id="email"
           required
         ></input>
-        <label htmlFor="password">Password</label>
+        <label htmlFor="password">
+          Password<span className="required">*</span>
+        </label>
         <div className="line"></div>
         <input
           onChange={(e) => setPassword((e.target as HTMLInputElement).value)}
