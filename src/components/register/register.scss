@@ -62,7 +62,7 @@ button {
 @media (min-width: 800px) {
   .form {
     width: 50%;
-    margin-top: 1rem;
+    margin-top: 4rem;
   }
 }
 
@@ -70,8 +70,9 @@ button {
   .form {
     width: 30%;
     box-shadow: 3px 3px 8px $primary-color;
-    margin-top: 1rem;
     border-radius: $border-radius;
+    margin-top: 4rem;
+    height: 50vh;
     background-color: white;
   }
 
@@ -83,5 +84,6 @@ button {
       rgba(18, 94, 138, 1) 35%,
       rgba(0, 212, 255, 1) 100%
     );
+    background-attachment: fixed;
   }
 }
