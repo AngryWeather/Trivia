@@ -1,4 +1,4 @@
-import { SyntheticEvent } from "react";
+import { SyntheticEvent, useRef } from "react";
 
 type Data = {
   username: string | undefined;
@@ -7,6 +7,8 @@ type Data = {
 };
 
 export const usePost = ({ username, email, password }: Data) => {
+  const response = useRef<number>();
+
   async function handleSubmit(e: SyntheticEvent): Promise<void> {
     e.preventDefault();
     const request = await fetch("http://localhost:8080/user/register", {
@@ -21,8 +23,7 @@ export const usePost = ({ username, email, password }: Data) => {
         password,
       }),
     });
-    const response = await request.json();
-    console.log(response);
+    response.current = await request.status;
   }
-  return { handleSubmit };
+  return { handleSubmit, response };
 };

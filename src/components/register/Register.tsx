@@ -6,7 +6,7 @@ export const Register: FC = () => {
   const [username, setUsername] = useState<string>();
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
-  const { handleSubmit } = usePost({ username, email, password });
+  const { handleSubmit, response } = usePost({ username, email, password });
 
   return (
     <div className="form" id="register">
