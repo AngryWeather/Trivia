@@ -11,7 +11,12 @@ export const Register: FC = () => {
   return (
     <div className="form" id="register">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username">
+          Username
+          <sup>
+            <span className="required">*</span>
+          </sup>
+        </label>
         <div className="line"></div>
         <input
           onChange={(e) => setUsername((e.target as HTMLInputElement).value)}
