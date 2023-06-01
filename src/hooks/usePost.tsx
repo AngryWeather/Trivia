@@ -1,4 +1,4 @@
-import { SyntheticEvent, useEffect, useState } from "react";
+import { SyntheticEvent, useState } from "react";
 
 type Data = {
   username: string | undefined;
@@ -9,13 +9,6 @@ type Data = {
 export const usePost = ({ username, email, password }: Data) => {
   const [responseStatus, setResponseStatus] = useState<number>();
   const [responseBody, setResponseBody] = useState<any>();
-
-  // useEffect(() => {
-  //    setResponseStatus(responseStatus);
-  //    if (responseStatus !== 200) {
-
-  //    }
-  // }, [responseStatus, responseBody])
 
   async function handleSubmit(e: SyntheticEvent): Promise<void> {
     e.preventDefault();
