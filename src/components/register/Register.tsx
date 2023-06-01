@@ -20,14 +20,23 @@ export const Register: FC = () => {
     if (responseBody !== undefined) {
       if (
         responseStatus === 400 &&
+        responseBody.error === "user and email already exist"
+      ) {
+        setUserExists("user already exists");
+        setEmailExists("user with his email already exists");
+      }
+      if (
+        responseStatus === 400 &&
         responseBody.error === "user already exists"
       ) {
         setUserExists("user already exists");
+        setEmailExists(undefined);
       } else if (
         responseStatus === 400 &&
         responseBody.error === "user with this email already exists"
       ) {
         setEmailExists("user with this email already exists");
+        setUserExists(undefined);
       }
     }
     if (responseStatus === 200) {
