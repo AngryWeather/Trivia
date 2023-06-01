@@ -51,7 +51,7 @@ export const Register: FC = () => {
           type="text"
           required
         ></input>
-        {userExists && <p>{userExists}</p>}
+        {userExists && <p className="error">{userExists}</p>}
         <label htmlFor="email">
           Email<span className="required">*</span>
         </label>
@@ -62,7 +62,7 @@ export const Register: FC = () => {
           id="email"
           required
         ></input>
-        {emailExists && <p>{emailExists}</p>}
+        {emailExists && <p className="error">{emailExists}</p>}
         <label htmlFor="password">
           Password<span className="required">*</span>
         </label>

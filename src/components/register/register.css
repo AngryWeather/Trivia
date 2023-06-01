@@ -28,6 +28,12 @@ label {
   color: red;
 }
 
+.error {
+  margin-top: 0;
+  color: red;
+  font-size: 0.7rem;
+}
+
 input {
   margin-bottom: 1rem;
   padding: 0.4rem;
