@@ -63,12 +63,16 @@ button {
   color: white;
   border: 5px solid $primary-color;
   border-radius: $border-radius;
+
+  &:focus {
+    border: 5px outset $primary-color;
+  }
 }
 
 @media (min-width: 800px) {
   .form {
     width: 50%;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
   form {
     background-color: white;
@@ -80,7 +84,7 @@ button {
     width: 30%;
     box-shadow: 3px 3px 8px $primary-color;
     border-radius: $border-radius;
-    margin-top: 4rem;
+    margin-top: 2rem;
     height: 50vh;
     background-color: white;
   }
