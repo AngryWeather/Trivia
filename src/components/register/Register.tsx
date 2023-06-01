@@ -40,7 +40,7 @@ export const Register: FC = () => {
       }
     }
     if (responseStatus === 200) {
-      navigate("/");
+      navigate("/user/login");
     }
   }, [responseStatus, responseBody, navigate]);
 
