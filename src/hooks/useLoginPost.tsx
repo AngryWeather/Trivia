@@ -5,7 +5,7 @@ type Data = {
   password: string | undefined;
 };
 
-export const usePost = ({ email, password }: Data) => {
+export const useLoginPost = ({ email, password }: Data) => {
   const [responseStatus, setResponseStatus] = useState<number>();
   const [responseBody, setResponseBody] = useState<any>();
 
