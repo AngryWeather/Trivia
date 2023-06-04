@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import "./header.css";
 import menu from "../../icons/menu-icon.svg";
+import { Register } from "../register/Register";
 
 export const Header: FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -14,8 +15,12 @@ export const Header: FC = () => {
     return (
       <header>
         <h1>Trivia</h1>
-        <img onClick={() => setMobileNavVisible(true ? false : false)}
-          src={menu} alt="hamburger menu" className="menu" />
+        <img
+          onClick={() => setMobileNavVisible(mobileNavVisible ? false : true)}
+          src={menu}
+          alt="hamburger menu"
+          className="menu"
+        />
       </header>
     );
   } else {
