@@ -12,16 +12,4 @@ describe("Register component", () => {
     const form = screen.getByRole("form", { name: "form" });
     expect(form).toBeInTheDocument();
   });
-
-  // it("username input sets username", () => {
-  //   render(
-  //     <MemoryRouter>
-  //       <Register></Register>
-  //     </MemoryRouter>
-  //   );
-  //   const setUsername = jest.fn();
-  //   const input = screen.getByLabelText(/Username/);
-  //   fireEvent.change(input, { target: { value: "TestUsername" } });
-  //   expect(setUsername).toBeCalledWith(/TestUsername/);
-  // });
 });

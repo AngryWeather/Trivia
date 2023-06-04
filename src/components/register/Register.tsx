@@ -7,8 +7,8 @@ export const Register: FC = () => {
   const [username, setUsername] = useState<string>();
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
-  const [userExists, setUserExists] = useState<string>();
-  const [emailExists, setEmailExists] = useState<string>();
+  const [userExistsError, setUserExists] = useState<string>();
+  const [emailExistsError, setEmailExists] = useState<string>();
   const { handleSubmit, responseStatus, responseBody } = usePost({
     username,
     email,
@@ -60,7 +60,7 @@ export const Register: FC = () => {
           type="text"
           required
         ></input>
-        {userExists && <p className="error">{userExists}</p>}
+        {userExistsError && <p className="error">{userExistsError}</p>}
         <label htmlFor="email">
           Email<span className="required">*</span>
         </label>
@@ -71,7 +71,7 @@ export const Register: FC = () => {
           id="email"
           required
         ></input>
-        {emailExists && <p className="error">{emailExists}</p>}
+        {emailExistsError && <p className="error">{emailExistsError}</p>}
         <label htmlFor="password">
           Password<span className="required">*</span>
         </label>
