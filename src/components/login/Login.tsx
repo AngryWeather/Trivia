@@ -1,5 +1,6 @@
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useLoginPost } from "../../hooks/useLoginPost";
+import { useNavigate } from "react-router-dom";
 
 export const Login: FC = () => {
   const [email, setEmail] = useState<string>();
@@ -8,6 +9,21 @@ export const Login: FC = () => {
     email,
     password,
   });
+  const [incorrectEmail, setIncorrectEmail] = useState<string>();
+  const [incorrectPassword, setIncorrectPassword] = useState<string>();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (responseBody !== undefined) {
+      if (responseStatus === 200) {
+        navigate("/");
+      } else if (responseBody.error === "Email is incorrect") {
+        setIncorrectEmail(responseBody.error);
+      } else if (responseBody.error === "Incorrect password") {
+        setIncorrectPassword(responseBody.error);
+      }
+    }
+  }, [responseStatus, responseBody, navigate]);
 
   return (
     <div className="form" id="login">
@@ -20,6 +36,7 @@ export const Login: FC = () => {
           name="email-login"
           id="email-login"
         />
+        {incorrectEmail && <p className="error">{incorrectEmail}</p>}
         <label htmlFor="password-login">Password</label>
         <div className="line"></div>
         <input
@@ -28,6 +45,7 @@ export const Login: FC = () => {
           name="password-login"
           id="password-login"
         />
+        {incorrectPassword && <p className="error">{incorrectPassword}</p>}
         <button type="submit">Login</button>
       </form>
     </div>
