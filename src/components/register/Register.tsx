@@ -83,7 +83,7 @@ export const Register: FC = () => {
           minLength={6}
           required
         ></input>
-        <button type="submit">Submit</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   );
