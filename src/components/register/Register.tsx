@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import "./register.css";
+import "../../form.css";
 import { usePost } from "../../hooks/usePost";
 import { useNavigate } from "react-router-dom";
 
