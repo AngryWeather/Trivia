@@ -8,10 +8,12 @@ export const Login: FC = () => {
     <div className="form" id="login">
       <form aria-label="form" action="">
         <label htmlFor="email-login">Email</label>
-        <input type="email" name="email-login" id="email-login" />
         <div className="line"></div>
+        <input type="email" name="email-login" id="email-login" />
         <label htmlFor="password-login">Password</label>
+        <div className="line"></div>
         <input type="password" name="password-login" id="password-login" />
+        <button type="submit">Login</button>
       </form>
     </div>
   );
