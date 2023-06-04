@@ -46,7 +46,7 @@ export const Register: FC = () => {
 
   return (
     <div className="form" id="register">
-      <form onSubmit={handleSubmit}>
+      <form aria-label="form" onSubmit={handleSubmit}>
         <label htmlFor="username">
           Username
           <sup>
