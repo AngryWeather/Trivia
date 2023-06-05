@@ -16,6 +16,7 @@ export const Login: FC = () => {
   useEffect(() => {
     if (responseBody !== undefined) {
       if (responseStatus === 200) {
+        localStorage.setItem("user", JSON.stringify(responseBody));
         navigate("/");
       } else if (responseBody.error === "Email is incorrect") {
         setIncorrectEmail(responseBody.error);
