@@ -35,6 +35,7 @@ export const Login: FC = () => {
           type="email"
           name="email-login"
           id="email-login"
+          required
         />
         {incorrectEmail && <p className="error">{incorrectEmail}</p>}
         <label htmlFor="password-login">Password</label>
@@ -44,6 +45,7 @@ export const Login: FC = () => {
           type="password"
           name="password-login"
           id="password-login"
+          required
         />
         {incorrectPassword && <p className="error">{incorrectPassword}</p>}
         <button type="submit">Login</button>
