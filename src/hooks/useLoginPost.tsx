@@ -25,6 +25,7 @@ export const useLoginPost = ({ email, password }: Data) => {
     setResponseStatus(response.status);
     try {
       setResponseBody(await response.json());
+      console.log("LOGIN POST");
     } catch (error) {
       console.error(error);
     }

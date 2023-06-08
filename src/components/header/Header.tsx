@@ -12,7 +12,8 @@ export const Header: FC = () => {
     if (localStorage.length !== 0) {
       setCurrentUser(JSON.parse(localStorage.getItem("user")!).username);
     }
-    console.log(currentUser);
+    // console.log(currentUser);
+    // console.log(typeof currentUser);
   }, [currentUser, setCurrentUser]);
 
   useEffect(() => {
@@ -35,6 +36,7 @@ export const Header: FC = () => {
     return (
       <header>
         <h1>Trivia</h1>
+        {currentUser && <p>{currentUser}</p>}
       </header>
     );
   }

@@ -17,7 +17,8 @@ export const Login: FC = () => {
 
   useEffect(() => {
     if (responseBody !== undefined) {
-      if (responseStatus === 200) {
+      console.log(responseBody);
+      if (responseStatus === 200 && !responseBody.error) {
         localStorage.setItem("user", JSON.stringify(responseBody));
         setCurrentUser(responseBody.username);
         navigate("/");

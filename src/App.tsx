@@ -7,9 +7,7 @@ import { useState } from "react";
 import { UserContext } from "./contexts/UserContext";
 
 function App() {
-  const [currentUser, setCurrentUser] = useState({
-    username: null,
-  });
+  const [currentUser, setCurrentUser] = useState(null);
 
   return (
     <UserContext.Provider value={{ currentUser, setCurrentUser }}>
