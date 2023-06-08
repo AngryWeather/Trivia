@@ -36,7 +36,7 @@ export const Header: FC = () => {
     return (
       <header>
         <h1>Trivia</h1>
-        {currentUser && <p>{currentUser}</p>}
+        {currentUser && <p className="current-user">{currentUser}</p>}
       </header>
     );
   }
