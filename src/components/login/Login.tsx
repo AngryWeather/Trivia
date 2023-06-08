@@ -1,6 +1,7 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useContext, useEffect, useState } from "react";
 import { useLoginPost } from "../../hooks/useLoginPost";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../contexts/UserContext";
 
 export const Login: FC = () => {
   const [email, setEmail] = useState<string>();
@@ -9,6 +10,7 @@ export const Login: FC = () => {
     email,
     password,
   });
+  const { setCurrentUser } = useContext(UserContext);
   const [incorrectEmail, setIncorrectEmail] = useState<string>();
   const [incorrectPassword, setIncorrectPassword] = useState<string>();
   const navigate = useNavigate();
@@ -17,6 +19,8 @@ export const Login: FC = () => {
     if (responseBody !== undefined) {
       if (responseStatus === 200) {
         localStorage.setItem("user", JSON.stringify(responseBody));
+        console.log(responseBody);
+        setCurrentUser(responseBody.username);
         navigate("/");
       } else if (responseBody.error === "Email is incorrect") {
         setIncorrectEmail(responseBody.error);
@@ -24,7 +28,7 @@ export const Login: FC = () => {
         setIncorrectPassword(responseBody.error);
       }
     }
-  }, [responseStatus, responseBody, navigate]);
+  }, [responseStatus, responseBody, navigate, setCurrentUser]);
 
   return (
     <div className="form" id="login">

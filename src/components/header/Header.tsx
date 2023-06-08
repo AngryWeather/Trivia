@@ -1,11 +1,18 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useContext, useEffect, useState } from "react";
 import "./header.css";
 import menu from "../../icons/menu-icon.svg";
-import { Register } from "../register/Register";
+import { UserContext } from "../../contexts/UserContext";
 
 export const Header: FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
+  const { currentUser } = useContext(UserContext);
+
+  useEffect(() => {
+    if (currentUser !== null) {
+      console.log(currentUser);
+    }
+  }, [currentUser]);
 
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
