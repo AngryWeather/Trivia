@@ -19,7 +19,6 @@ export const Login: FC = () => {
     if (responseBody !== undefined) {
       if (responseStatus === 200) {
         localStorage.setItem("user", JSON.stringify(responseBody));
-        console.log(responseBody);
         setCurrentUser(responseBody.username);
         navigate("/");
       } else if (responseBody.error === "Email is incorrect") {
