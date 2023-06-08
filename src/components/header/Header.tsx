@@ -6,13 +6,14 @@ import { UserContext } from "../../contexts/UserContext";
 export const Header: FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
   const [mobileNavVisible, setMobileNavVisible] = useState(false);
-  const { currentUser } = useContext(UserContext);
+  const { currentUser, setCurrentUser } = useContext(UserContext);
 
   useEffect(() => {
-    if (currentUser !== null) {
-      console.log(currentUser);
+    if (localStorage.length !== 0) {
+      setCurrentUser(JSON.parse(localStorage.getItem("user")!).username);
     }
-  }, [currentUser]);
+    console.log(currentUser);
+  }, [currentUser, setCurrentUser]);
 
   useEffect(() => {
     window.addEventListener("resize", () => setWidth(window.innerWidth));
