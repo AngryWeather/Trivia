@@ -21,4 +21,12 @@ h1 {
 .current-user {
   margin-left: auto;
   padding: 1rem;
+}
+
+.login {
+  margin-left: auto;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  font-family: "Courier New", Courier, monospace;
 }/*# sourceMappingURL=header.css.map */
