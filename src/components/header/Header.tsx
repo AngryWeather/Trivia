@@ -3,6 +3,7 @@ import "./header.css";
 import menu from "../../icons/menu-icon.svg";
 import { UserContext } from "../../contexts/UserContext";
 import { Link } from "react-router-dom";
+import { DisplayUsername } from "../display-username/Display-username";
 
 export const Header: FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -38,7 +39,7 @@ export const Header: FC = () => {
       <header>
         <h1>Trivia</h1>
         {currentUser ? (
-          <p className="current-user">{currentUser}</p>
+          <DisplayUsername currentUser={currentUser}></DisplayUsername>
         ) : (
           <Link className="login" to="/user/login">
             Log In
