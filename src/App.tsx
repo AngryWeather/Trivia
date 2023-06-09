@@ -5,6 +5,7 @@ import { Register } from "./components/register/Register";
 import { Login } from "./components/login/Login";
 import { useState } from "react";
 import { UserContext } from "./contexts/UserContext";
+import { QuestionSettings } from "./components/question-settings/QuestionSettings";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -16,6 +17,10 @@ function App() {
         <Routes>
           <Route path="/user/register" element={<Register />}></Route>
           <Route path="/user/login" element={<Login></Login>}></Route>
+          <Route
+            path="/"
+            element={<QuestionSettings></QuestionSettings>}
+          ></Route>
         </Routes>
       </div>
     </UserContext.Provider>
