@@ -3,7 +3,7 @@
 }
 
 body {
-  background: repeating-radial-gradient(ellipse at center, rgb(2, 0, 36) 0%, rgb(18, 94, 138) 35%, rgb(0, 212, 255) 100%);
+  background: linear-gradient(180deg, #00d4ff, #00bfed, #03abda, #0a97c6, #0f83b2, #11709e, #125e8a);
 }
 
 form {
@@ -11,6 +11,7 @@ form {
   flex-direction: column;
   padding: 2rem;
   background-color: white;
+  border-radius: 0.5rem;
 }
 
 label {
@@ -76,7 +77,6 @@ button:focus {
   .form {
     width: 30%;
     box-shadow: 3px 3px 8px rgb(18, 94, 138);
-    border-radius: 0.5rem;
     margin-top: 2rem;
     height: 50vh;
     background-color: white;
