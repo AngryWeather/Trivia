@@ -1,16 +1,28 @@
-import { FC, useContext, useEffect } from "react";
-import { UserContext } from "../../contexts/UserContext";
+import { FC, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const QuestionSettings: FC = () => {
-  const { currentUser } = useContext(UserContext);
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!currentUser) {
+    if (localStorage.length === 0) {
       navigate("/user/login");
     }
-  }, [currentUser, navigate]);
+  }, [navigate]);
 
-  return <div></div>;
+  return (
+    <div className="form">
+      <form action="">
+        <label htmlFor="num-of-questions">Number of questions:</label>
+        <div className="line"></div>
+        <input
+          type="number"
+          name="num-of-questions"
+          id="num-of-questions"
+          min="0"
+          max="50"
+        />
+      </form>
+    </div>
+  );
 };
