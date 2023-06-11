@@ -24,16 +24,13 @@ export const SelectInput: FC = () => {
   }, []);
 
   return (
-    <div>
-      <select name="categories" id="categories">
-        {categories &&
-          categories!.map((key) => (
-            <option key={key.id} value={key.name}>
-              {key.name}
-            </option>
-          ))}
-        {/* <option value=""></option> */}
-      </select>
-    </div>
+    <select name="categories" id="categories">
+      {categories &&
+        categories!.map((key) => (
+          <option key={key.id} value={key.name}>
+            {key.name}
+          </option>
+        ))}
+    </select>
   );
 };
