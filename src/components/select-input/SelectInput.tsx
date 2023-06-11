@@ -25,6 +25,7 @@ export const SelectInput: FC = () => {
 
   return (
     <select name="categories" id="categories">
+      <option value="any-category">Any category</option>
       {categories &&
         categories!.map((key) => (
           <option key={key.id} value={key.name}>
