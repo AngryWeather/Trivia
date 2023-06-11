@@ -11,7 +11,6 @@ form {
   flex-direction: column;
   padding: 2rem;
   background-color: white;
-  border-radius: 0.5rem;
 }
 
 label {
@@ -68,6 +67,7 @@ button:focus {
   .form {
     width: 50%;
     margin-top: 2rem;
+    border-radius: 1rem;
   }
   form {
     background-color: white;
@@ -78,7 +78,6 @@ button:focus {
     width: 30%;
     box-shadow: 3px 3px 8px rgb(18, 94, 138);
     margin-top: 2rem;
-    height: 50vh;
     background-color: white;
   }
 }/*# sourceMappingURL=form.css.map */

@@ -22,7 +22,6 @@ form {
   flex-direction: column;
   padding: 2rem;
   background-color: white;
-  border-radius: $border-radius;
 }
 
 label {
@@ -78,6 +77,7 @@ button {
   .form {
     width: 50%;
     margin-top: 2rem;
+    border-radius: 1rem;
   }
   form {
     background-color: white;
@@ -89,7 +89,6 @@ button {
     width: 30%;
     box-shadow: 3px 3px 8px $primary-color;
     margin-top: 2rem;
-    height: 50vh;
     background-color: white;
   }
 }
