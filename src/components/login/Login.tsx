@@ -31,30 +31,33 @@ export const Login: FC = () => {
   }, [responseStatus, responseBody, navigate, setCurrentUser]);
 
   return (
-    <div className="form" id="login">
-      <form onSubmit={handleSubmit} aria-label="form" action="">
-        <label htmlFor="email-login">Email</label>
-        <div className="line"></div>
-        <input
-          onChange={(e) => setEmail((e.target as HTMLInputElement).value)}
-          type="email"
-          name="email-login"
-          id="email-login"
-          required
-        />
-        {incorrectEmail && <p className="error">{incorrectEmail}</p>}
-        <label htmlFor="password-login">Password</label>
-        <div className="line"></div>
-        <input
-          onChange={(e) => setPassword((e.target as HTMLInputElement).value)}
-          type="password"
-          name="password-login"
-          id="password-login"
-          required
-        />
-        {incorrectPassword && <p className="error">{incorrectPassword}</p>}
-        <button type="submit">Login</button>
-      </form>
-    </div>
+    <main>
+      {" "}
+      <div className="form" id="login">
+        <form onSubmit={handleSubmit} aria-label="form" action="">
+          <label htmlFor="email-login">Email</label>
+          <div className="line"></div>
+          <input
+            onChange={(e) => setEmail((e.target as HTMLInputElement).value)}
+            type="email"
+            name="email-login"
+            id="email-login"
+            required
+          />
+          {incorrectEmail && <p className="error">{incorrectEmail}</p>}
+          <label htmlFor="password-login">Password</label>
+          <div className="line"></div>
+          <input
+            onChange={(e) => setPassword((e.target as HTMLInputElement).value)}
+            type="password"
+            name="password-login"
+            id="password-login"
+            required
+          />
+          {incorrectPassword && <p className="error">{incorrectPassword}</p>}
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </main>
   );
 };
