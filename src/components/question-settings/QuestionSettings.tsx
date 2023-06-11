@@ -1,5 +1,6 @@
 import { FC, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { SelectInput } from "../select-input/SelectInput";
 
 export const QuestionSettings: FC = () => {
   const navigate = useNavigate();
@@ -22,6 +23,9 @@ export const QuestionSettings: FC = () => {
           min="0"
           max="50"
         />
+        <label htmlFor="categories">Category:</label>
+        <div className="line"></div>
+        <SelectInput></SelectInput>
       </form>
     </div>
   );
