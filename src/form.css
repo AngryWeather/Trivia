@@ -71,6 +71,7 @@ button:focus {
   }
   form {
     background-color: white;
+    border-radius: 1rem;
   }
 }
 @media (min-width: 1270px) {
