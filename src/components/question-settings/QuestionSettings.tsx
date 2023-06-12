@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SelectInput } from "../select-input/SelectInput";
 import { DifficultyInput } from "../difficulty-input/DifficultyInput";
@@ -6,7 +6,12 @@ import { TypeInput } from "../type-input/TypeInput";
 
 export const QuestionSettings = () => {
   const [value, setValue] = useState<number>(10);
+  const [category, setCategory] = useState<string>("Any category");
   const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(category);
+  }, [category]);
 
   useEffect(() => {
     if (localStorage.length === 0) {
@@ -30,7 +35,11 @@ export const QuestionSettings = () => {
         />
         <label htmlFor="categories">Category:</label>
         <div className="line"></div>
-        <SelectInput></SelectInput>
+        <SelectInput
+          setCategory={(e: { target: { value: SetStateAction<string> } }) =>
+            setCategory(e.target.value)
+          }
+        ></SelectInput>
         <DifficultyInput></DifficultyInput>
         <TypeInput></TypeInput>
         <button type="submit">Submit</button>

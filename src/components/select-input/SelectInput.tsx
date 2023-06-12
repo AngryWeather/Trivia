@@ -5,7 +5,11 @@ type Category = {
   name: string;
 };
 
-export const SelectInput: FC = () => {
+type PropsType = {
+  setCategory: React.ChangeEventHandler<HTMLSelectElement>;
+};
+
+export const SelectInput = (props: PropsType) => {
   const [categories, setCategories] = useState<Array<Category>>();
 
   useEffect(() => {
@@ -24,8 +28,8 @@ export const SelectInput: FC = () => {
   }, []);
 
   return (
-    <select name="categories" id="categories">
-      <option value="any-category">Any category</option>
+    <select onChange={props.setCategory} name="categories" id="categories">
+      <option value="Any category">Any category</option>
       {categories &&
         categories!.map((key) => (
           <option key={key.id} value={key.name}>
