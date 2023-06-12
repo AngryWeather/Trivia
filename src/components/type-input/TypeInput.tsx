@@ -1,5 +1,3 @@
-import { FC } from "react";
-
 type PropsType = {
   type: string;
   setType: React.ChangeEventHandler<HTMLInputElement>;

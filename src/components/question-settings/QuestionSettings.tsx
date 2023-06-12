@@ -12,10 +12,6 @@ export const QuestionSettings = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(type);
-  }, [type]);
-
-  useEffect(() => {
     if (localStorage.length === 0) {
       navigate("/user/login");
     }
