@@ -14,8 +14,6 @@ export const Header: FC = () => {
     if (localStorage.length !== 0) {
       setCurrentUser(JSON.parse(localStorage.getItem("user")!).username);
     }
-    // console.log(currentUser);
-    // console.log(typeof currentUser);
   }, [currentUser, setCurrentUser]);
 
   useEffect(() => {
