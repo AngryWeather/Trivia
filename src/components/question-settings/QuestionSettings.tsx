@@ -7,11 +7,12 @@ import { TypeInput } from "../type-input/TypeInput";
 export const QuestionSettings = () => {
   const [value, setValue] = useState<number>(10);
   const [category, setCategory] = useState<string>("Any category");
+  const [difficulty, setDifficulty] = useState<string>("any");
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(category);
-  }, [category]);
+    console.log(difficulty);
+  }, [difficulty]);
 
   useEffect(() => {
     if (localStorage.length === 0) {
@@ -40,7 +41,10 @@ export const QuestionSettings = () => {
             setCategory(e.target.value)
           }
         ></SelectInput>
-        <DifficultyInput></DifficultyInput>
+        <DifficultyInput
+          difficulty={difficulty}
+          setDifficulty={(e) => setDifficulty(e.target.value)}
+        ></DifficultyInput>
         <TypeInput></TypeInput>
         <button type="submit">Submit</button>
       </form>
