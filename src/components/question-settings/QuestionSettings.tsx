@@ -8,11 +8,12 @@ export const QuestionSettings = () => {
   const [value, setValue] = useState<number>(10);
   const [category, setCategory] = useState<string>("Any category");
   const [difficulty, setDifficulty] = useState<string>("any");
+  const [type, setType] = useState<string>("any");
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(difficulty);
-  }, [difficulty]);
+    console.log(type);
+  }, [type]);
 
   useEffect(() => {
     if (localStorage.length === 0) {
@@ -45,7 +46,10 @@ export const QuestionSettings = () => {
           difficulty={difficulty}
           setDifficulty={(e) => setDifficulty(e.target.value)}
         ></DifficultyInput>
-        <TypeInput></TypeInput>
+        <TypeInput
+          type={type}
+          setType={(e) => setType(e.target.value)}
+        ></TypeInput>
         <button type="submit">Submit</button>
       </form>
     </div>
