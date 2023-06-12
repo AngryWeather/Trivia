@@ -1,7 +1,8 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SelectInput } from "../select-input/SelectInput";
-import { DifficultyInput } from "../difficultu-input/DifficultyInput";
+import { DifficultyInput } from "../difficulty-input/DifficultyInput";
+import { TypeInput } from "../type-input/TypeInput";
 
 export const QuestionSettings = () => {
   const navigate = useNavigate();
@@ -28,6 +29,7 @@ export const QuestionSettings = () => {
         <div className="line"></div>
         <SelectInput></SelectInput>
         <DifficultyInput></DifficultyInput>
+        <TypeInput></TypeInput>
       </form>
     </div>
   );
