@@ -8,7 +8,7 @@ export const TypeInput: FC = () => {
       <div className="radio-inputs">
         <div className="option">
           <label htmlFor="any-type">any</label>
-          <input type="radio" name="type" id="any-type" />
+          <input type="radio" name="type" id="any-type" checked />
         </div>
         <div className="option">
           <label htmlFor="boolean-type">boolean</label>
