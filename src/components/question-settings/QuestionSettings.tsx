@@ -1,15 +1,13 @@
-import { FC, useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { SelectInput } from "../select-input/SelectInput";
 import { DifficultyInput } from "../difficultu-input/DifficultyInput";
 
 export const QuestionSettings = () => {
-  const [userLoggedIn, setUserLoggedIn] = useState<boolean>(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (localStorage.length === 0) {
-      setUserLoggedIn(true);
       navigate("/user/login");
     }
   }, [navigate]);
