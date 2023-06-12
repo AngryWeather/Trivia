@@ -30,6 +30,7 @@ export const QuestionSettings = () => {
         <SelectInput></SelectInput>
         <DifficultyInput></DifficultyInput>
         <TypeInput></TypeInput>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
