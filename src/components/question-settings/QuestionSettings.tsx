@@ -1,12 +1,15 @@
-import { FC, useEffect } from "react";
+import { FC, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SelectInput } from "../select-input/SelectInput";
+import { DifficultyInput } from "../difficultu-input/DifficultyInput";
 
-export const QuestionSettings: FC = () => {
+export const QuestionSettings = () => {
+  const [userLoggedIn, setUserLoggedIn] = useState<boolean>(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     if (localStorage.length === 0) {
+      setUserLoggedIn(true);
       navigate("/user/login");
     }
   }, [navigate]);
@@ -26,6 +29,7 @@ export const QuestionSettings: FC = () => {
         <label htmlFor="categories">Category:</label>
         <div className="line"></div>
         <SelectInput></SelectInput>
+        <DifficultyInput></DifficultyInput>
       </form>
     </div>
   );

@@ -52,12 +52,38 @@ select {
   font-family: $primary-font;
   border: 1px solid $primary-color;
   border-radius: $border-radius;
-  color: rgba(2, 0, 36, 1);
+  color: $dark-font;
   background-color: white;
 
   &::selection {
     background-color: lightblue;
   }
+}
+
+.radio-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.option input,
+.option label {
+  height: 100%;
+  margin: 0;
+}
+
+.option input {
+  accent-color: $primary-color;
+}
+
+.radio-inputs label {
+  color: $dark-font;
+  font-size: 0.9rem;
+  padding-right: 0.5rem;
 }
 
 button {

@@ -52,6 +52,32 @@ select::selection {
   background-color: lightblue;
 }
 
+.radio-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.option input,
+.option label {
+  height: 100%;
+  margin: 0;
+}
+
+.option input {
+  accent-color: rgb(18, 94, 138);
+}
+
+.radio-inputs label {
+  color: rgb(2, 0, 36);
+  font-size: 0.9rem;
+  padding-right: 0.5rem;
+}
+
 button {
   width: 40%;
   margin: 1rem auto;
