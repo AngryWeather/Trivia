@@ -5,11 +5,24 @@ export const Questions = () => {
   const { state } = useLocation();
   const { responseBody } = state;
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
+  const [answers, setAnswers] = useState([
+    ...responseBody.results[currentQuestion].incorrect_answers.concat(
+      responseBody.results[currentQuestion].correct_answer
+    ),
+  ]);
 
   useEffect(() => {
     console.log("Response Body");
     console.log(responseBody);
-  }, [responseBody]);
+    console.log(answers);
+  }, [responseBody, answers]);
+
+  useEffect(() => {
+    const shuffle = () => {
+      setAnswers(answers.sort(() => Math.random() - 0.5));
+    };
+    shuffle();
+  }, [answers]);
 
   return (
     <div className="form">
@@ -24,14 +37,9 @@ export const Questions = () => {
       </p>
       {responseBody.results[currentQuestion].type === "multiple" && (
         <div>
-          <button className="answer">
-            {responseBody.results[currentQuestion].correct_answer}
-          </button>
-          {responseBody.results[currentQuestion].incorrect_answers.map(
-            (n: string) => (
-              <button className="answer">{n}</button>
-            )
-          )}
+          {answers.map((n) => (
+            <button>{n}</button>
+          ))}
         </div>
       )}
     </div>
