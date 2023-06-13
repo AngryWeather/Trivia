@@ -3,13 +3,25 @@ import { useNavigate } from "react-router-dom";
 import { SelectInput } from "../select-input/SelectInput";
 import { DifficultyInput } from "../difficulty-input/DifficultyInput";
 import { TypeInput } from "../type-input/TypeInput";
+import { useQuestionSettings } from "../../hooks/useQuestionSettings";
 
 export const QuestionSettings = () => {
-  const [value, setValue] = useState<number>(10);
+  const [numOfQuestions, setNumOfQuestions] = useState<string>("10");
   const [category, setCategory] = useState<string>("Any category");
   const [difficulty, setDifficulty] = useState<string>("any");
   const [type, setType] = useState<string>("any");
+  const { handleSubmit, responseStatus, responseBody } = useQuestionSettings({
+    numOfQuestions,
+    category,
+    difficulty,
+    type,
+  });
   const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(responseStatus);
+    console.log(responseBody);
+  }, [responseStatus, responseBody]);
 
   useEffect(() => {
     if (localStorage.length === 0) {
@@ -19,17 +31,17 @@ export const QuestionSettings = () => {
 
   return (
     <div className="form">
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <label htmlFor="num-of-questions">Number of questions:</label>
         <div className="line"></div>
         <input
-          onChange={(e) => setValue(Number(e.target.value))}
+          onChange={(e) => setNumOfQuestions(e.target.value)}
           type="number"
           name="num-of-questions"
           id="num-of-questions"
           min="1"
           max="50"
-          value={value}
+          value={numOfQuestions}
         />
         <label htmlFor="categories">Category:</label>
         <div className="line"></div>
