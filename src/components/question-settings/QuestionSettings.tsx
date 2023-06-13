@@ -24,10 +24,10 @@ export const QuestionSettings = () => {
   }, [responseStatus, responseBody]);
 
   useEffect(() => {
-    if (localStorage.length === 0) {
+    if (localStorage.length === 0 || responseStatus === 403) {
       navigate("/user/login");
     }
-  }, [navigate]);
+  }, [navigate, responseStatus]);
 
   return (
     <div className="form">
