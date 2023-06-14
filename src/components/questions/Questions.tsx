@@ -5,11 +5,14 @@ export const Questions = () => {
   const { state } = useLocation();
   const { responseBody } = state;
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
+  const [knownAnswer, setKnownAnswer] = useState<boolean>(false);
   const [answers, setAnswers] = useState([
     ...responseBody.results[currentQuestion].incorrect_answers.concat(
       responseBody.results[currentQuestion].correct_answer
     ),
   ]);
+  const [shuffledAnswers, setShuffledAnswers] =
+    useState<Array<string>>(answers);
 
   useEffect(() => {
     console.log("Response Body");
@@ -20,8 +23,12 @@ export const Questions = () => {
   }, [responseBody, answers]);
 
   useEffect(() => {
+    console.log(knownAnswer);
+  }, [knownAnswer]);
+
+  useEffect(() => {
     const shuffle = () => {
-      setAnswers(answers.sort(() => Math.random() - 0.5));
+      setShuffledAnswers(answers.sort(() => Math.random() - 0.5));
     };
     shuffle();
   }, [answers]);
@@ -50,11 +57,17 @@ export const Questions = () => {
       ></p>
       {responseBody.results[currentQuestion].type === "multiple" && (
         <div className="answer-buttons">
-          {answers.map((n, key) => (
+          {shuffledAnswers.map((n, key) => (
             <button
-              className="answer-button"
+              className={
+                "answer-button " +
+                (n === responseBody.results[currentQuestion].correct_answer
+                  ? "correct-answer"
+                  : "incorrect-answer")
+              }
               key={key}
               dangerouslySetInnerHTML={{ __html: n }}
+              onClick={() => setKnownAnswer(true)}
             ></button>
           ))}
         </div>
