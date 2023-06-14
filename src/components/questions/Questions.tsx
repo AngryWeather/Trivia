@@ -13,6 +13,8 @@ export const Questions = () => {
 
   useEffect(() => {
     console.log("Response Body");
+    console.log(responseBody.results.length);
+    console.log(currentQuestion);
     console.log(responseBody);
     console.log(answers);
   }, [responseBody, answers]);
@@ -24,6 +26,14 @@ export const Questions = () => {
     shuffle();
   }, [answers]);
 
+  useEffect(() => {
+    setAnswers([
+      ...responseBody.results[currentQuestion].incorrect_answers.concat(
+        responseBody.results[currentQuestion].correct_answer
+      ),
+    ]);
+  }, [currentQuestion]);
+
   return (
     <div className="form">
       <div className="row">
@@ -32,15 +42,23 @@ export const Questions = () => {
       <div className="row">
         <p>Difficulty: {responseBody.results[currentQuestion].difficulty}</p>
       </div>
-      <p className="question">
-        {responseBody.results[currentQuestion].question}
-      </p>
+      <p
+        className="question"
+        dangerouslySetInnerHTML={{
+          __html: responseBody.results[currentQuestion].question,
+        }}
+      ></p>
       {responseBody.results[currentQuestion].type === "multiple" && (
         <div>
-          {answers.map((n) => (
-            <button>{n}</button>
+          {answers.map((n, key) => (
+            <button key={key} dangerouslySetInnerHTML={{ __html: n }}></button>
           ))}
         </div>
+      )}
+      {currentQuestion < responseBody.results.length - 1 && (
+        <button onClick={() => setCurrentQuestion(currentQuestion + 1)}>
+          Next
+        </button>
       )}
     </div>
   );
