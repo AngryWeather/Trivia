@@ -96,6 +96,10 @@ select::selection {
   color: rgb(2, 0, 36);
 }
 
+.row p {
+  margin: 0.1rem;
+}
+
 .answer-buttons .incorrect-answer {
   background-color: #8a3e11;
   border: 5px solid #8a3e11;

@@ -53,7 +53,12 @@ export const Questions = () => {
       <div className="row">
         <p>Difficulty: {responseBody.results[currentQuestion].difficulty}</p>
       </div>
-      <div className="row">Score: {score}</div>
+      <div className="row">
+        <p> Score: {score} </p>
+        <p>
+          Question: {currentQuestion + 1} / {responseBody.results.length}
+        </p>
+      </div>
       <p
         className="question"
         dangerouslySetInnerHTML={{

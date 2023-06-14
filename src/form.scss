@@ -105,6 +105,10 @@ select {
   }
 }
 
+.row p {
+  margin: 0.1rem;
+}
+
 .answer-buttons .incorrect-answer {
   background-color: $red-color;
   border: 5px solid $red-color;
