@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { SyntheticEvent, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 export const Questions = () => {
@@ -40,9 +40,14 @@ export const Questions = () => {
     setKnownAnswer(false);
   };
 
-  const onAnswerClickHandler = () => {
+  const onAnswerClickHandler = (e: SyntheticEvent) => {
     setKnownAnswer(true);
-    setScore(score + 1);
+    if (
+      (e.target as HTMLInputElement).value ===
+      responseBody.results[currentQuestion].correct_answer
+    ) {
+      setScore(score + 1);
+    }
   };
 
   return (
@@ -79,6 +84,7 @@ export const Questions = () => {
               }
               key={key}
               dangerouslySetInnerHTML={{ __html: n }}
+              value={n}
               onClick={onAnswerClickHandler}
               disabled={knownAnswer}
             ></button>
