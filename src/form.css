@@ -79,6 +79,63 @@ select::selection {
   padding-right: 0.5rem;
 }
 
+.row,
+.question {
+  padding: 0.1rem 1rem;
+  text-align: center;
+  color: rgb(2, 0, 36);
+}
+
+.answer-buttons .correct-answer {
+  background-color: #3b570b;
+  border: 5px solid #3b570b;
+  border-radius: 0.5rem;
+}
+.answer-buttons .correct-answer:focus {
+  background-color: #3b570b;
+  color: rgb(2, 0, 36);
+}
+
+.row p {
+  margin: 0.1rem;
+}
+
+.answer-buttons .incorrect-answer {
+  background-color: #8a3e11;
+  border: 5px solid #8a3e11;
+  border-radius: 0.5rem;
+}
+.answer-buttons .incorrect-answer:focus {
+  background-color: #8a3e11;
+  color: rgb(2, 0, 36);
+}
+
+.answer-buttons {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.next button {
+  background-color: #3d118a;
+  border: none;
+}
+
+.answer-button {
+  background-color: white;
+  color: rgb(2, 0, 36);
+  border-color: #3d118a;
+}
+.answer-button:focus {
+  background-color: #3d118a;
+  color: white;
+}
+
+.next {
+  display: flex;
+}
+
 button {
   width: 40%;
   margin: 1rem auto;
@@ -88,9 +145,6 @@ button {
   color: white;
   border: 5px solid rgb(18, 94, 138);
   border-radius: 0.5rem;
-}
-button:focus {
-  border: 5px outset rgb(18, 94, 138);
 }
 
 @media (min-width: 800px) {
@@ -107,7 +161,5 @@ button:focus {
 @media (min-width: 1270px) {
   .form {
     width: 30%;
-    box-shadow: 3px 3px 8px rgb(18, 94, 138);
-    background-color: white;
   }
 }/*# sourceMappingURL=form.css.map */

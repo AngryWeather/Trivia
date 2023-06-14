@@ -19,9 +19,10 @@ export const QuestionSettings = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log(responseStatus);
-    console.log(responseBody);
-  }, [responseStatus, responseBody]);
+    if (responseStatus === 200 && responseBody) {
+      navigate("/questions", { state: { responseBody: responseBody } });
+    }
+  }, [navigate, responseBody, responseStatus]);
 
   useEffect(() => {
     if (localStorage.length === 0 || responseStatus === 403) {

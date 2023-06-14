@@ -21,6 +21,7 @@ h1 {
 .current-user {
   margin-left: auto;
   padding: 1rem;
+  color: white;
 }
 
 .login {

@@ -27,6 +27,7 @@ h1 {
 
 .current-user {
   @include align-header-element();
+  color: white;
 }
 
 .login {
