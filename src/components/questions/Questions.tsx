@@ -13,6 +13,7 @@ export const Questions = () => {
   ]);
   const [shuffledAnswers, setShuffledAnswers] =
     useState<Array<string>>(answers);
+  const [score, setScore] = useState<number>(0);
 
   useEffect(() => {
     console.log("known answer");
@@ -39,6 +40,11 @@ export const Questions = () => {
     setKnownAnswer(false);
   };
 
+  const onAnswerClickHandler = () => {
+    setKnownAnswer(true);
+    setScore(score + 1);
+  };
+
   return (
     <div className="form">
       <div className="row">
@@ -47,6 +53,7 @@ export const Questions = () => {
       <div className="row">
         <p>Difficulty: {responseBody.results[currentQuestion].difficulty}</p>
       </div>
+      <div className="row">Score: {score}</div>
       <p
         className="question"
         dangerouslySetInnerHTML={{
@@ -67,7 +74,7 @@ export const Questions = () => {
               }
               key={key}
               dangerouslySetInnerHTML={{ __html: n }}
-              onClick={() => setKnownAnswer(true)}
+              onClick={onAnswerClickHandler}
               disabled={knownAnswer}
             ></button>
           ))}
