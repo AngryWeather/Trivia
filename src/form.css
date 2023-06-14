@@ -91,11 +91,19 @@ select::selection {
   border: 5px solid #3b570b;
   border-radius: 0.5rem;
 }
+.answer-buttons .correct-answer:focus {
+  background-color: #3b570b;
+  color: rgb(2, 0, 36);
+}
 
 .answer-buttons .incorrect-answer {
   background-color: #8a3e11;
   border: 5px solid #8a3e11;
   border-radius: 0.5rem;
+}
+.answer-buttons .incorrect-answer:focus {
+  background-color: #8a3e11;
+  color: rgb(2, 0, 36);
 }
 
 .answer-buttons {

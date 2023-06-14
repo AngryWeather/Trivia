@@ -15,14 +15,6 @@ export const Questions = () => {
     useState<Array<string>>(answers);
 
   useEffect(() => {
-    console.log("Response Body");
-    console.log(responseBody.results.length);
-    console.log(currentQuestion);
-    console.log(responseBody);
-    console.log(answers);
-  }, [responseBody, answers]);
-
-  useEffect(() => {
     console.log(knownAnswer);
   }, [knownAnswer]);
 
