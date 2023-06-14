@@ -87,6 +87,40 @@ select {
   padding-right: 0.5rem;
 }
 
+.row,
+.question {
+  padding: 0.1rem 1rem;
+  text-align: center;
+  color: $dark-font;
+}
+
+.answer-buttons {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.next button {
+  background-color: $purple-color;
+  border: none;
+}
+
+.answer-button {
+  background-color: white;
+  color: $dark-font;
+  border-color: $purple-color;
+
+  &:focus {
+    background-color: $purple-color;
+    color: white;
+  }
+}
+
+.next {
+  display: flex;
+}
+
 button {
   width: 40%;
   margin: 1rem auto;
@@ -96,10 +130,6 @@ button {
   color: white;
   border: 5px solid $primary-color;
   border-radius: $border-radius;
-
-  &:focus {
-    border: 5px outset $primary-color;
-  }
 }
 
 @media (min-width: 800px) {
@@ -117,7 +147,5 @@ button {
 @media (min-width: 1270px) {
   .form {
     width: 30%;
-    box-shadow: 3px 3px 8px $primary-color;
-    background-color: white;
   }
 }

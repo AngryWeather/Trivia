@@ -32,7 +32,7 @@ export const Questions = () => {
         responseBody.results[currentQuestion].correct_answer
       ),
     ]);
-  }, [currentQuestion]);
+  }, [currentQuestion, responseBody.results]);
 
   return (
     <div className="form">
@@ -49,16 +49,22 @@ export const Questions = () => {
         }}
       ></p>
       {responseBody.results[currentQuestion].type === "multiple" && (
-        <div>
+        <div className="answer-buttons">
           {answers.map((n, key) => (
-            <button key={key} dangerouslySetInnerHTML={{ __html: n }}></button>
+            <button
+              className="answer-button"
+              key={key}
+              dangerouslySetInnerHTML={{ __html: n }}
+            ></button>
           ))}
         </div>
       )}
       {currentQuestion < responseBody.results.length - 1 && (
-        <button onClick={() => setCurrentQuestion(currentQuestion + 1)}>
-          Next
-        </button>
+        <div className="next">
+          <button onClick={() => setCurrentQuestion(currentQuestion + 1)}>
+            Next
+          </button>
+        </div>
       )}
     </div>
   );
