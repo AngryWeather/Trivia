@@ -15,6 +15,7 @@ export const Questions = () => {
     useState<Array<string>>(answers);
 
   useEffect(() => {
+    console.log("known answer");
     console.log(knownAnswer);
   }, [knownAnswer]);
 
@@ -32,6 +33,11 @@ export const Questions = () => {
       ),
     ]);
   }, [currentQuestion, responseBody.results]);
+
+  const onNextHandler = () => {
+    setCurrentQuestion(currentQuestion + 1);
+    setKnownAnswer(false);
+  };
 
   return (
     <div className="form">
@@ -53,22 +59,23 @@ export const Questions = () => {
             <button
               className={
                 "answer-button " +
-                (n === responseBody.results[currentQuestion].correct_answer
-                  ? "correct-answer"
-                  : "incorrect-answer")
+                (knownAnswer
+                  ? n === responseBody.results[currentQuestion].correct_answer
+                    ? "correct-answer"
+                    : "incorrect-answer"
+                  : "")
               }
               key={key}
               dangerouslySetInnerHTML={{ __html: n }}
               onClick={() => setKnownAnswer(true)}
+              disabled={knownAnswer}
             ></button>
           ))}
         </div>
       )}
       {currentQuestion < responseBody.results.length - 1 && (
         <div className="next">
-          <button onClick={() => setCurrentQuestion(currentQuestion + 1)}>
-            Next
-          </button>
+          <button onClick={onNextHandler}>Next</button>
         </div>
       )}
     </div>
