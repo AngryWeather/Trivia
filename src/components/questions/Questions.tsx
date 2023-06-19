@@ -65,27 +65,25 @@ export const Questions = () => {
           __html: responseBody.results[currentQuestion].question,
         }}
       ></p>
-      {responseBody.results[currentQuestion].type === "multiple" && (
-        <div className="answer-buttons">
-          {shuffledAnswers.map((n, key) => (
-            <button
-              className={
-                "answer-button " +
-                (knownAnswer
-                  ? n === responseBody.results[currentQuestion].correct_answer
-                    ? "correct-answer"
-                    : "incorrect-answer"
-                  : "")
-              }
-              key={key}
-              dangerouslySetInnerHTML={{ __html: n }}
-              value={n}
-              onClick={onAnswerClickHandler}
-              disabled={knownAnswer}
-            ></button>
-          ))}
-        </div>
-      )}
+      <div className="answer-buttons">
+        {shuffledAnswers.map((n, key) => (
+          <button
+            className={
+              "answer-button " +
+              (knownAnswer
+                ? n === responseBody.results[currentQuestion].correct_answer
+                  ? "correct-answer"
+                  : "incorrect-answer"
+                : "")
+            }
+            key={key}
+            dangerouslySetInnerHTML={{ __html: n }}
+            value={n}
+            onClick={onAnswerClickHandler}
+            disabled={knownAnswer}
+          ></button>
+        ))}
+      </div>
       {currentQuestion < responseBody.results.length - 1 && (
         <div className="next">
           <button onClick={onNextHandler}>Next</button>
