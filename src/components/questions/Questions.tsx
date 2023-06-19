@@ -16,11 +16,6 @@ export const Questions = () => {
   const [score, setScore] = useState<number>(0);
 
   useEffect(() => {
-    console.log("known answer");
-    console.log(knownAnswer);
-  }, [knownAnswer]);
-
-  useEffect(() => {
     const shuffle = () => {
       setShuffledAnswers(answers.sort(() => Math.random() - 0.5));
     };

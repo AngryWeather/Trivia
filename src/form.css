@@ -122,6 +122,10 @@ select::selection {
   gap: 1rem;
 }
 
+.form p:nth-child(1) {
+  margin-top: 1rem;
+}
+
 .next button {
   background-color: #3d118a;
   border: none;

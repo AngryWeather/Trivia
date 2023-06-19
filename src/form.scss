@@ -135,6 +135,10 @@ select {
   gap: 1rem;
 }
 
+.form p:nth-child(1) {
+  margin-top: 1rem;
+}
+
 .next button {
   background-color: $purple-color;
   border: none;
