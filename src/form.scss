@@ -5,15 +5,13 @@
 }
 
 body {
-  background: linear-gradient(
-    180deg,
+  background: repeating-linear-gradient(
+    90deg,
     #00d4ff,
     #00bfed,
     #03abda,
     #0a97c6,
-    #0f83b2,
-    #11709e,
-    #125e8a
+    #0f83b2
   );
 }
 

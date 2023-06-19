@@ -41,7 +41,21 @@ export const Questions = () => {
       (e.target as HTMLInputElement).value ===
       responseBody.results[currentQuestion].correct_answer
     ) {
-      setScore(score + 1);
+      evaluateScore();
+    }
+  };
+
+  const evaluateScore = () => {
+    switch (responseBody.results[currentQuestion].difficulty) {
+      case "easy":
+        setScore(score + 1);
+        break;
+      case "medium":
+        setScore(score + 2);
+        break;
+      case "hard":
+        setScore(score + 3);
+        break;
     }
   };
 
