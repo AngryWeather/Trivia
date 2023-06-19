@@ -12,4 +12,4 @@ Logged in username is visible in the header:
 # Trivia
 ![image](https://github.com/AngryWeather/Trivia/assets/105065960/4ab1e95d-f559-4409-aad9-36dc54e1fa72)
 After clicking on one of the options the correct answer is going to be highlighted in green.
-![image](https://github.com/AngryWeather/Trivia/assets/105065960/0cebad4a-81eb-45d1-aa90-3c8981c53d45)
+![image](https://github.com/AngryWeather/Trivia/assets/105065960/6715fa72-3ea1-4c57-bd06-9d7191c5291b)
