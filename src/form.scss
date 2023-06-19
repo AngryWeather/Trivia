@@ -138,6 +138,11 @@ select {
 .next button {
   background-color: $purple-color;
   border: none;
+
+  &:hover {
+    background-color: white;
+    color: $purple-color;
+  }
 }
 
 .answer-button {

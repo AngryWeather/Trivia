@@ -126,6 +126,10 @@ select::selection {
   background-color: #3d118a;
   border: none;
 }
+.next button:hover {
+  background-color: white;
+  color: #3d118a;
+}
 
 .answer-button {
   background-color: white;
