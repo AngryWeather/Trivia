@@ -1,5 +1,5 @@
 import { SyntheticEvent, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export const Questions = () => {
   const { state } = useLocation();
@@ -14,6 +14,13 @@ export const Questions = () => {
   const [shuffledAnswers, setShuffledAnswers] =
     useState<Array<string>>(answers);
   const [score, setScore] = useState<number>(0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.length === 0 || state.responseStatus === 403) {
+      navigate("/user/login");
+    }
+  }, [navigate, state.responseStatus]);
 
   useEffect(() => {
     const shuffle = () => {
