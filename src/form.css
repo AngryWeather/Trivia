@@ -18,6 +18,11 @@ label {
   color: rgb(18, 94, 138);
 }
 
+button:active, button:hover:enabled {
+  color: white;
+  background-color: #3d118a;
+}
+
 .line {
   height: 1.5px;
   background-color: rgb(18, 94, 138);

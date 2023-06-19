@@ -29,6 +29,14 @@ label {
   color: $primary-color;
 }
 
+button {
+  &:active,
+  &:hover:enabled {
+    color: white;
+    background-color: $purple-color;
+  }
+}
+
 .line {
   height: 1.5px;
   background-color: $primary-color;
