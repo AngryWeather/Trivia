@@ -124,19 +124,11 @@ select::selection {
   background-color: #3d118a;
   border: none;
 }
-.next button:hover {
-  background-color: white;
-  color: #3d118a;
-}
 
 .answer-button {
   background-color: white;
   color: rgb(2, 0, 36);
   border-color: #3d118a;
-}
-.answer-button:focus {
-  background-color: #3d118a;
-  color: white;
 }
 
 .next {

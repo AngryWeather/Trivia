@@ -132,22 +132,12 @@ select {
 .next button {
   background-color: $purple-color;
   border: none;
-
-  &:hover {
-    background-color: white;
-    color: $purple-color;
-  }
 }
 
 .answer-button {
   background-color: white;
   color: $dark-font;
   border-color: $purple-color;
-
-  &:focus {
-    background-color: $purple-color;
-    color: white;
-  }
 }
 
 .next {
