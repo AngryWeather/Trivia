@@ -5,7 +5,11 @@ import "./nav-bar.css";
 export const NavBar: FC = () => {
   return (
     <nav>
-      <Link to="/user/register">Register</Link>
+      <ul>
+        <li>
+          <Link to="/user/register">Register</Link>
+        </li>
+      </ul>
     </nav>
   );
 };

@@ -5,6 +5,7 @@ import { UserContext } from "../../contexts/UserContext";
 import { Link } from "react-router-dom";
 import { DisplayUsername } from "../display-username/Display-username";
 import { NavBar } from "../nav-bar/NavBar";
+import { PopUp } from "../pop-up/PopUp";
 
 export const Header: FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -31,6 +32,8 @@ export const Header: FC = () => {
           alt="hamburger menu"
           className="menu"
         />
+
+        {mobileNavVisible && <PopUp></PopUp>}
       </header>
     );
   } else {

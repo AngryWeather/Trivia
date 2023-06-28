@@ -1,7 +1,10 @@
 @import "../../variables.scss";
 
 nav {
-  padding: $header-padding;
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
 }
 
 a {
@@ -11,5 +14,27 @@ a {
 
   &:hover {
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  nav {
+    position: absolute;
+    top: $header-height;
+    background-color: $primary-color;
+    width: 100vw;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        border-top: 2px solid white;
+
+        a {
+          padding: $header-padding;
+        }
+      }
+    }
   }
 }

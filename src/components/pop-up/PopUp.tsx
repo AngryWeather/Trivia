@@ -1,7 +1,6 @@
-import { FC } from "react"
+import { FC } from "react";
+import { NavBar } from "../nav-bar/NavBar";
 
 export const PopUp: FC = () => {
-  return (
-    <div></div>
-  );
-}
+  return <NavBar></NavBar>;
+};

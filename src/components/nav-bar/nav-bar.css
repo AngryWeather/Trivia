@@ -1,5 +1,6 @@
-nav {
-  padding: 1rem;
+nav ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 a {
@@ -9,4 +10,23 @@ a {
 }
 a:hover {
   font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+  nav {
+    position: absolute;
+    top: 4rem;
+    background-color: rgb(18, 94, 138);
+    width: 100vw;
+  }
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  nav ul li {
+    border-top: 2px solid white;
+  }
+  nav ul li a {
+    padding: 1rem;
+  }
 }/*# sourceMappingURL=nav-bar.css.map */
