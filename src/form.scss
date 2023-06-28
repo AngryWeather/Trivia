@@ -1,0 +1,190 @@
+@import "./variables.scss";
+
+.form {
+  margin: 0 auto;
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    #00d4ff,
+    #00bfed,
+    #03abda,
+    #0a97c6,
+    #0f83b2,
+    #11709e,
+    #125e8a
+  );
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: white;
+}
+
+label {
+  font-family: $primary-font;
+  color: $primary-color;
+}
+
+button {
+  &:active,
+  &:hover:enabled {
+    color: white;
+    background-color: $purple-color;
+  }
+}
+
+.line {
+  height: 1.5px;
+  background-color: $primary-color;
+  margin-bottom: 1rem;
+}
+
+.required {
+  color: red;
+}
+
+.error {
+  margin-top: 0;
+  color: red;
+  font-size: 0.7rem;
+}
+
+input,
+select {
+  margin-bottom: 1rem;
+  padding: 0.4rem;
+  font-family: $primary-font;
+  border: 1px solid $primary-color;
+  border-radius: $border-radius;
+  color: $dark-font;
+  background-color: white;
+
+  &::selection {
+    background-color: lightblue;
+  }
+}
+
+.radio-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.option input,
+.option label {
+  height: 100%;
+  margin: 0;
+}
+
+.option input {
+  accent-color: $primary-color;
+}
+
+.radio-inputs label {
+  color: $dark-font;
+  font-size: 0.9rem;
+  padding-right: 0.5rem;
+}
+
+.row,
+.question {
+  padding: 0.1rem 1rem;
+  text-align: center;
+  color: $dark-font;
+}
+
+.answer-buttons .correct-answer {
+  background-color: $green-color;
+  border: 5px solid $green-color;
+  border-radius: $border-radius;
+
+  &:focus {
+    background-color: $green-color;
+    color: $dark-font;
+  }
+}
+
+.row p {
+  margin: 0.1rem;
+}
+
+.answer-buttons .incorrect-answer {
+  background-color: $red-color;
+  border: 5px solid $red-color;
+  border-radius: $border-radius;
+
+  &:focus {
+    background-color: $red-color;
+    color: $dark-font;
+  }
+}
+
+.answer-buttons {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.next button {
+  background-color: $purple-color;
+  border: none;
+
+  &:hover {
+    background-color: white;
+    color: $purple-color;
+  }
+}
+
+.answer-button {
+  background-color: white;
+  color: $dark-font;
+  border-color: $purple-color;
+
+  &:focus {
+    background-color: $purple-color;
+    color: white;
+  }
+}
+
+.next {
+  display: flex;
+}
+
+button {
+  width: 40%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  font-family: $primary-font;
+  background-color: $primary-color;
+  color: white;
+  border: 5px solid $primary-color;
+  border-radius: $border-radius;
+}
+
+@media (min-width: 800px) {
+  .form {
+    width: 50%;
+    margin-top: 2rem;
+    border-radius: 1rem;
+  }
+  form {
+    background-color: white;
+    border-radius: 1rem;
+  }
+}
+
+@media (min-width: 1270px) {
+  .form {
+    width: 30%;
+  }
+}

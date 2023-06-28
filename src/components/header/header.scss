@@ -1,5 +1,10 @@
 @import "../../variables.scss";
 
+@mixin align-header-element {
+  margin-left: auto;
+  padding: $header-padding;
+}
+
 header {
   height: $header-height;
   background-color: $primary-color;
@@ -18,4 +23,16 @@ h1 {
   height: 50%;
   margin-left: auto;
   padding: $header-padding;
+}
+
+.current-user {
+  @include align-header-element();
+  color: white;
+}
+
+.login {
+  @include align-header-element();
+  color: white;
+  text-decoration: none;
+  font-family: $primary-font;
 }

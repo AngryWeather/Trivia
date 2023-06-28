@@ -1,0 +1,174 @@
+.form {
+  margin: 0 auto;
+}
+
+body {
+  background: linear-gradient(180deg, #00d4ff, #00bfed, #03abda, #0a97c6, #0f83b2, #11709e, #125e8a);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: white;
+}
+
+label {
+  font-family: "Courier New", Courier, monospace;
+  color: rgb(18, 94, 138);
+}
+
+button:active, button:hover:enabled {
+  color: white;
+  background-color: #3d118a;
+}
+
+.line {
+  height: 1.5px;
+  background-color: rgb(18, 94, 138);
+  margin-bottom: 1rem;
+}
+
+.required {
+  color: red;
+}
+
+.error {
+  margin-top: 0;
+  color: red;
+  font-size: 0.7rem;
+}
+
+input,
+select {
+  margin-bottom: 1rem;
+  padding: 0.4rem;
+  font-family: "Courier New", Courier, monospace;
+  border: 1px solid rgb(18, 94, 138);
+  border-radius: 0.5rem;
+  color: rgb(2, 0, 36);
+  background-color: white;
+}
+input::-moz-selection, select::-moz-selection {
+  background-color: lightblue;
+}
+input::selection,
+select::selection {
+  background-color: lightblue;
+}
+
+.radio-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+}
+
+.option input,
+.option label {
+  height: 100%;
+  margin: 0;
+}
+
+.option input {
+  accent-color: rgb(18, 94, 138);
+}
+
+.radio-inputs label {
+  color: rgb(2, 0, 36);
+  font-size: 0.9rem;
+  padding-right: 0.5rem;
+}
+
+.row,
+.question {
+  padding: 0.1rem 1rem;
+  text-align: center;
+  color: rgb(2, 0, 36);
+}
+
+.answer-buttons .correct-answer {
+  background-color: #3b570b;
+  border: 5px solid #3b570b;
+  border-radius: 0.5rem;
+}
+.answer-buttons .correct-answer:focus {
+  background-color: #3b570b;
+  color: rgb(2, 0, 36);
+}
+
+.row p {
+  margin: 0.1rem;
+}
+
+.answer-buttons .incorrect-answer {
+  background-color: #8a3e11;
+  border: 5px solid #8a3e11;
+  border-radius: 0.5rem;
+}
+.answer-buttons .incorrect-answer:focus {
+  background-color: #8a3e11;
+  color: rgb(2, 0, 36);
+}
+
+.answer-buttons {
+  display: flex;
+  padding: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.next button {
+  background-color: #3d118a;
+  border: none;
+}
+.next button:hover {
+  background-color: white;
+  color: #3d118a;
+}
+
+.answer-button {
+  background-color: white;
+  color: rgb(2, 0, 36);
+  border-color: #3d118a;
+}
+.answer-button:focus {
+  background-color: #3d118a;
+  color: white;
+}
+
+.next {
+  display: flex;
+}
+
+button {
+  width: 40%;
+  margin: 1rem auto;
+  padding: 0.5rem;
+  font-family: "Courier New", Courier, monospace;
+  background-color: rgb(18, 94, 138);
+  color: white;
+  border: 5px solid rgb(18, 94, 138);
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 800px) {
+  .form {
+    width: 50%;
+    margin-top: 2rem;
+    border-radius: 1rem;
+  }
+  form {
+    background-color: white;
+    border-radius: 1rem;
+  }
+}
+@media (min-width: 1270px) {
+  .form {
+    width: 30%;
+  }
+}/*# sourceMappingURL=form.css.map */

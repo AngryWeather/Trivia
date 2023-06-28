@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sources":["header.scss","../../variables.scss","header.css"],"names":[],"mappings":"AAEA;EACE,YCDc;EDEd,kCCJc;EDKd,aAAA;EACA,mBAAA;AEDF;;AFIA;EACE,SAAA;EACA,YAAA;EACA,aCXe;EDYf,qBAAA;AEDF;;AFIA;EACE,WAAA;EACA,iBAAA;EACA,aClBe;ACiBjB","file":"header.css"}
+=======
+{"version":3,"sources":["header.scss","../../variables.scss","header.css"],"names":[],"mappings":"AAOA;EACE,YAAA;EACA,kCCTc;EDUd,aAAA;EACA,mBAAA;AENF;;AFSA;EACE,SAAA;EACA,YAAA;EACA,aChBe;EDiBf,qBAAA;AENF;;AFSA;EACE,WAAA;EACA,iBAAA;EACA,aCvBe;ACiBjB;;AFSA;EAxBE,iBAAA;EACA,aCHe;ED4Bf,YAAA;AELF;;AFQA;EA7BE,iBAAA;EACA,aCHe;EDiCf,YAAA;EACA,qBAAA;EACA,8CCjCa;AC6Bf","file":"header.css"}
+>>>>>>> master
