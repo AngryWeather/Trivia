@@ -1,0 +1,15 @@
+@import "../../variables.scss";
+
+nav {
+  padding: $header-padding;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+
+  &:hover {
+    font-size: 1.1rem;
+  }
+}

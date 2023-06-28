@@ -4,6 +4,7 @@ import menu from "../../icons/menu-icon.svg";
 import { UserContext } from "../../contexts/UserContext";
 import { Link } from "react-router-dom";
 import { DisplayUsername } from "../display-username/Display-username";
+import { NavBar } from "../nav-bar/NavBar";
 
 export const Header: FC = () => {
   const [width, setWidth] = useState(window.innerWidth);
@@ -36,6 +37,7 @@ export const Header: FC = () => {
     return (
       <header>
         <h1>Trivia</h1>
+        <NavBar></NavBar>
         {currentUser ? (
           <DisplayUsername currentUser={currentUser}></DisplayUsername>
         ) : (
