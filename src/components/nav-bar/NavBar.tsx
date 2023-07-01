@@ -9,6 +9,11 @@ export const NavBar: FC = () => {
         <li>
           <Link to="/user/register">Register</Link>
         </li>
+        {localStorage.length >= 1 && (
+          <li>
+            <Link to="">Logout</Link>
+          </li>
+        )}
       </ul>
     </nav>
   );

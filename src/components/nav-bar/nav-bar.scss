@@ -3,10 +3,18 @@
 nav {
   margin: auto;
   ul {
+    display: flex;
+    gap: 1rem;
     list-style-type: none;
-    padding: 0.5rem;
     margin: auto;
+  }
+  li {
     border: 1px solid white;
+    padding: 0.5rem;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -14,10 +22,7 @@ a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
-
-  &:hover {
-    font-size: 1.1rem;
-  }
+  display: block;
 }
 
 @media (max-width: 900px) {
