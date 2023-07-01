@@ -16,11 +16,6 @@ export const Questions = () => {
   const [score, setScore] = useState<number>(0);
 
   useEffect(() => {
-    console.log("known answer");
-    console.log(knownAnswer);
-  }, [knownAnswer]);
-
-  useEffect(() => {
     const shuffle = () => {
       setShuffledAnswers(answers.sort(() => Math.random() - 0.5));
     };
@@ -40,13 +35,27 @@ export const Questions = () => {
     setKnownAnswer(false);
   };
 
+  const evaluateScore = () => {
+    switch (responseBody.results[currentQuestion].difficulty) {
+      case "easy":
+        setScore(score + 1);
+        break;
+      case "medium":
+        setScore(score + 2);
+        break;
+      case "hard":
+        setScore(score + 3);
+        break;
+    }
+  };
+
   const onAnswerClickHandler = (e: SyntheticEvent) => {
     setKnownAnswer(true);
     if (
       (e.target as HTMLInputElement).value ===
       responseBody.results[currentQuestion].correct_answer
     ) {
-      setScore(score + 1);
+      evaluateScore();
     }
   };
 
