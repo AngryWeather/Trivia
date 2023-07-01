@@ -29,11 +29,9 @@ a {
 
     ul {
       list-style-type: none;
-      padding: 0;
+      padding: 1rem;
 
       li {
-        border-top: 2px solid white;
-
         a {
           padding: $header-padding;
         }
