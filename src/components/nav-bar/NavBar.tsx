@@ -11,7 +11,7 @@ export const NavBar: FC = () => {
         </li>
         {localStorage.length >= 1 && (
           <li>
-            <Link to="">Logout</Link>
+            <Link to="/user/logout">Logout</Link>
           </li>
         )}
       </ul>
