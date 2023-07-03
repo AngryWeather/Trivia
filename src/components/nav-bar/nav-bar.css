@@ -33,7 +33,7 @@ a {
     list-style-type: none;
     padding: 1rem;
   }
-  nav ul li a {
-    padding: 1rem;
+  nav ul li {
+    width: 100%;
   }
 }/*# sourceMappingURL=nav-bar.css.map */
