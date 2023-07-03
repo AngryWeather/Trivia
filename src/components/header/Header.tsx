@@ -23,7 +23,9 @@ export const Header: FC = () => {
   if (width < 1000) {
     return (
       <header>
-        <h1>Trivia</h1>
+        <a href="/trivia">
+          <h1>Trivia</h1>
+        </a>
         <img
           onClick={() => setMobileNavVisible(mobileNavVisible ? false : true)}
           src={menu}
@@ -37,7 +39,9 @@ export const Header: FC = () => {
   } else {
     return (
       <header>
-        <h1>Trivia</h1>
+        <a href="/trivia">
+          <h1>Trivia</h1>
+        </a>
         <NavBar currentUser={currentUser}></NavBar>
       </header>
     );
