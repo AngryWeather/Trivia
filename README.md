@@ -17,10 +17,22 @@ Frontend app using https://github.com/AngryWeather/Trivia-API and https://opentd
 
 
 # Generate questions
-![image](https://github.com/AngryWeather/Trivia/assets/105065960/33be7cfc-e55d-424f-9c69-7fee601db035)
+/
+<br>
+<br>
+![image](https://github.com/AngryWeather/Trivia/assets/105065960/ddca285a-28ba-4148-a9eb-ff58a1d452cc)
 Logged in username is visible in the header:
-![image](https://github.com/AngryWeather/Trivia/assets/105065960/2accc194-6538-455e-b3cf-8f0a9c911717)
+![image](https://github.com/AngryWeather/Trivia/assets/105065960/0dd07b95-53d1-4a5c-939e-81fb64e624e4)
+<br>
+<br>
+On mobile it's visible after clicking the hamburger menu:
+![image](https://github.com/AngryWeather/Trivia/assets/105065960/4d94ab4f-5b62-451d-9372-59bc25f3667c)
+
 # Trivia
-![image](https://github.com/AngryWeather/Trivia/assets/105065960/4ab1e95d-f559-4409-aad9-36dc54e1fa72)
+/questions
+<br>
+<br>
+![image](https://github.com/AngryWeather/Trivia/assets/105065960/35ce8883-c008-4a5a-8698-c16b01ad30cf)
 After clicking on one of the options the correct answer is going to be highlighted in green.
-![image](https://github.com/AngryWeather/Trivia/assets/105065960/6715fa72-3ea1-4c57-bd06-9d7191c5291b)
+![image](https://github.com/AngryWeather/Trivia/assets/105065960/88306d49-b4e1-4dd0-b88a-3aaa3e00fa60)
+
