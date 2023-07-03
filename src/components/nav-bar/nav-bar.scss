@@ -35,9 +35,12 @@ a {
     ul {
       list-style-type: none;
       padding: 1rem;
+      flex-direction: column;
 
       li {
-        width: 100%;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-top: 1px solid white;
       }
     }
   }
