@@ -19,14 +19,11 @@ h1 {
 }
 
 .current-user {
-  margin-left: auto;
-  padding: 1rem;
+  margin: 0;
   color: white;
 }
 
 .login {
-  margin-left: auto;
-  padding: 1rem;
   color: white;
   text-decoration: none;
   font-family: "Courier New", Courier, monospace;

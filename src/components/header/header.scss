@@ -26,12 +26,11 @@ h1 {
 }
 
 .current-user {
-  @include align-header-element();
+  margin: 0;
   color: white;
 }
 
 .login {
-  @include align-header-element();
   color: white;
   text-decoration: none;
   font-family: $primary-font;

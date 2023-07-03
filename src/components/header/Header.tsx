@@ -2,8 +2,6 @@ import { FC, useContext, useEffect, useState } from "react";
 import "./header.css";
 import menu from "../../icons/menu-icon.svg";
 import { UserContext } from "../../contexts/UserContext";
-import { Link } from "react-router-dom";
-import { DisplayUsername } from "../display-username/Display-username";
 import { NavBar } from "../nav-bar/NavBar";
 import { PopUp } from "../pop-up/PopUp";
 
@@ -40,14 +38,7 @@ export const Header: FC = () => {
     return (
       <header>
         <h1>Trivia</h1>
-        <NavBar></NavBar>
-        {currentUser ? (
-          <DisplayUsername currentUser={currentUser}></DisplayUsername>
-        ) : (
-          <Link className="login" to="/user/login">
-            Log In
-          </Link>
-        )}
+        <NavBar currentUser={currentUser}></NavBar>
       </header>
     );
   }

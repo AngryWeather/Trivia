@@ -1,12 +1,14 @@
 @import "../../variables.scss";
 
 nav {
-  margin: auto;
+  margin-left: auto;
+  margin-right: 1rem;
   ul {
     display: flex;
     gap: 1rem;
     list-style-type: none;
     margin: auto;
+    align-items: center;
   }
   li {
     border: 1px solid white;
@@ -36,8 +38,11 @@ a {
       list-style-type: none;
       padding: 1rem;
       flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
 
       li {
+        width: 100vw;
         padding: 0.5rem 1rem;
         border: none;
         border-top: 1px solid white;
