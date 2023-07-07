@@ -32,7 +32,7 @@ On mobile it's visible after clicking the hamburger menu:
 /questions
 <br>
 <br>
-![image](https://github.com/AngryWeather/Trivia/assets/105065960/35ce8883-c008-4a5a-8698-c16b01ad30cf)
+![image](https://github.com/AngryWeather/Trivia/assets/105065960/7dcf000b-f408-4908-b9f4-bfe40a2bd722)
 After clicking on one of the options the correct answer is going to be highlighted in green.
-![image](https://github.com/AngryWeather/Trivia/assets/105065960/88306d49-b4e1-4dd0-b88a-3aaa3e00fa60)
+![image](https://github.com/AngryWeather/Trivia/assets/105065960/62e82490-6f8b-4ded-bdd6-ebaa6949c649)
 
