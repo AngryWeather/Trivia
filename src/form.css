@@ -122,21 +122,20 @@ select::selection {
 }
 
 .next button {
-  background-color: #3d118a;
+  background-color: #8a3e12;
   border: none;
 }
 .next button:hover {
-  background-color: white;
-  color: #3d118a;
+  transform: scale(1.1);
 }
 
 .answer-button {
   background-color: white;
   color: rgb(2, 0, 36);
-  border-color: #3d118a;
+  border-color: #8a3e12;
 }
 .answer-button:focus {
-  background-color: #3d118a;
+  background-color: #8a3e12;
   color: white;
 }
 

@@ -135,22 +135,21 @@ select {
 }
 
 .next button {
-  background-color: $purple-color;
+  background-color: $brown-color;
   border: none;
 
   &:hover {
-    background-color: white;
-    color: $purple-color;
+    transform: scale(1.1);
   }
 }
 
 .answer-button {
   background-color: white;
   color: $dark-font;
-  border-color: $purple-color;
+  border-color: $brown-color;
 
   &:focus {
-    background-color: $purple-color;
+    background-color: $brown-color;
     color: white;
   }
 }
