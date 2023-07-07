@@ -17,7 +17,6 @@ export const Login: FC = () => {
 
   useEffect(() => {
     if (responseBody !== undefined) {
-      console.log(responseBody);
       if (responseStatus === 200 && !responseBody.error) {
         localStorage.setItem("user", JSON.stringify(responseBody));
         setCurrentUser(responseBody.username);
