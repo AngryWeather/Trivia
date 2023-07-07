@@ -91,13 +91,13 @@ select::selection {
 }
 
 .answer-buttons .correct-answer {
-  background-color: #3b570b;
-  border: 5px solid #3b570b;
+  background-color: green;
+  border: 5px solid green;
   border-radius: 0.5rem;
+  color: white;
 }
 .answer-buttons .correct-answer:focus {
-  background-color: #3b570b;
-  color: rgb(2, 0, 36);
+  background-color: green;
 }
 
 .row p {
@@ -105,13 +105,13 @@ select::selection {
 }
 
 .answer-buttons .incorrect-answer {
-  background-color: #8a3e11;
-  border: 5px solid #8a3e11;
+  background-color: darkred;
+  border: 5px solid darkred;
   border-radius: 0.5rem;
+  color: white;
 }
 .answer-buttons .incorrect-answer:focus {
-  background-color: #8a3e11;
-  color: rgb(2, 0, 36);
+  background-color: darkred;
 }
 
 .answer-buttons {
