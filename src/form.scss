@@ -32,8 +32,7 @@ label {
 button {
   &:active,
   &:hover:enabled {
-    color: white;
-    background-color: $purple-color;
+    transform: scale(1.1);
   }
 }
 

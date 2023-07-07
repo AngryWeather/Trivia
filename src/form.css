@@ -19,8 +19,7 @@ label {
 }
 
 button:active, button:hover:enabled {
-  color: white;
-  background-color: #3d118a;
+  transform: scale(1.1);
 }
 
 .line {
