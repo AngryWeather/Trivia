@@ -7,6 +7,7 @@ form {
   flex-direction: column;
   padding: 2rem;
   background-color: white;
+  box-shadow: 10px 10px 10px gray;
 }
 
 label {
@@ -118,7 +119,7 @@ select::selection {
 }
 
 .next button {
-  background-color: #8a3e12;
+  background-color: rgb(18, 94, 138);
   border: none;
 }
 .next button:hover {
@@ -128,10 +129,10 @@ select::selection {
 .answer-button {
   background-color: white;
   color: rgb(2, 0, 36);
-  border-color: #8a3e12;
+  border-color: rgb(18, 94, 138);
 }
 .answer-button:focus {
-  background-color: #8a3e12;
+  background-color: rgb(18, 94, 138);
   color: white;
 }
 
