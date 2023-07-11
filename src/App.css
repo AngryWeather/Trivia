@@ -12,3 +12,7 @@ body {
 main {
   min-height: 100%;
 }
+
+body {
+  background-color: gainsboro;
+}
