@@ -104,6 +104,12 @@ export const Questions = () => {
           <button onClick={onNextHandler}>Next</button>
         </div>
       )}
+
+      {currentQuestion === responseBody.results.length - 1 && (
+        <div className="next">
+          <button>Submit</button>
+        </div>
+      )}
     </div>
   );
 };
