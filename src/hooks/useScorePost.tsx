@@ -12,7 +12,7 @@ export const useScorePost = ({ username, score }: Data) => {
     e.preventDefault();
 
     const response = await fetch("http://localhost:8080/trivia/score", {
-      method: "POST",
+      method: "PATCH",
       mode: "cors",
       headers: {
         "Content-Type": "application/json",
