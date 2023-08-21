@@ -1,5 +1,7 @@
-import { SyntheticEvent, useEffect, useState } from "react";
+import { SyntheticEvent, useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { useScorePost } from "../../hooks/useScorePost";
+import { UserContext } from "../../contexts/UserContext";
 
 export const Questions = () => {
   const { state } = useLocation();
@@ -14,6 +16,8 @@ export const Questions = () => {
   const [shuffledAnswers, setShuffledAnswers] =
     useState<Array<string>>(answers);
   const [score, setScore] = useState<number>(0);
+  const { currentUser } = useContext(UserContext);
+  const { handleSubmit, responseStatus } = useScorePost({ currentUser, score });
 
   useEffect(() => {
     const shuffle = () => {

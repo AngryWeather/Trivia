@@ -1,11 +1,11 @@
 import { SyntheticEvent, useState } from "react";
 
 type Data = {
-  username: string;
+  currentUser: any;
   score: number;
 };
 
-export const useScorePost = ({ username, score }: Data) => {
+export const useScorePost = ({ currentUser, score }: Data) => {
   const [responseStatus, setResponseStatus] = useState<number>();
 
   async function handleSubmit(e: SyntheticEvent) {
@@ -18,7 +18,7 @@ export const useScorePost = ({ username, score }: Data) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        username,
+        currentUser,
         score,
       }),
     });
